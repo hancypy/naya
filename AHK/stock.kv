@@ -1,0 +1,326 @@
+<FlatButton@ButtonBehavior+Label>:
+
+<NewScreen>:
+    name:"new"
+    id: main_win
+    invi2:invi2
+    MDLabel:
+        id:invi2
+        pos_hint: {"center_x": .6, "center_y": .5}
+        color:app.theme_cls.primary_color
+        #md_bg_color: 1,1,0,.6
+        #text_color:1,1,0
+        size: self.texture_size
+        font_style: "Subtitle1"
+        bold:True
+        font_size:75
+        size_hint_x: .97
+        size_hint_y: None
+        opacity:self.opacity
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 100
+        pos_hint: {"center_x":.5, "center_y":0.97}
+        canvas.before:
+            Color:
+                rgba: (.06, .45, .45, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'POS System Maintained by AHK'
+            size_hint_x: .4
+            bold: True
+            color: (1,1,1,1)
+        Button:
+            text: 'Purchase/Sales'
+            background_normal: ''
+            background_color: app.theme_cls.primary_color
+            size_hint: .15,None
+            on_release:
+                root.enter()
+        Label:
+            #text: 'POS System Maintained by AHK'
+            size_hint_x: .05
+            bold: True
+            color: (1,1,1,1)
+        Label:
+            #text: 'POS System Maintained by AHK'
+            size_hint_x: .05
+            bold: True
+            color: (1,1,1,1)
+        Label:
+            id: dat
+            size_hint: .1,.7
+            readonly:True
+            background_color:.06, .45, .45, 1
+            foreground_color:1,1,1,1
+            hint_text:"DATE"
+            hint_text_color:1,1,1,1
+        Label:
+            #text: 'POS System Maintained by AHK'
+            size_hint_x: .05
+            bold: True
+            color: (1,1,1,1)
+    BoxLayout:
+        pos_hint: {"center_x":.5, "center_y":0.449}
+        padding: 10
+        BoxLayout:
+            id: product_details
+            orientation: "vertical"
+            size_hint_x: .8
+            spacing: 10
+            BoxLayout:
+                id: product_labels
+                size_hint_y: None
+                height: 90
+                spacing:5
+                canvas.before:
+                    Color:
+                        rgba: (.06,.45,.45, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                FlatButton:
+                    text: 'Product Name'
+                    size_hint: .3,None
+
+                FlatButton:
+                    text: 'Quantity'
+                    size_hint: .1,None
+                FlatButton:
+                    text: 'GST%'
+                    size_hint: .1,None
+                FlatButton:
+                    text: 'COST'
+                    size_hint: .1,None
+                FlatButton:
+                    text: 'Additional\n Charges'
+                    size_hint: .12,None
+
+            BoxLayout:
+                id: product_inputs
+                size_hint_y: None
+                height: 80
+                spacing: 5
+
+                TextInput:
+                    id: name_pos
+                    size_hint_x: .32
+                    hint_text:"Add Product or Edit Product details"
+                    multiline: False
+                    on_text_validate: root.mang()
+                TextInput:
+                    id: quant
+                    size_hint_x: .1
+                    multiline: False
+                    on_text_validate: root.update_purchases()
+                TextInput:
+                    id: gst_pos
+                    size_hint_x: .1
+                    multiline: False
+                    on_text_validate: root.update_purchases()
+                TextInput:
+                    id: price_inp
+                    size_hint_x: .1
+                    multiline: False
+                    on_text_validate: root.update_purchases()
+                TextInput:
+                    id: charges_pos
+                    #hint_text:"On Full Stock"
+                    size_hint_x: .12
+                    multiline: False
+                    on_text_validate: root.update_purchases()
+            BoxLayout:
+                id: add_to_cart
+                orientation: 'vertical'
+                BoxLayout:
+                    size_hint_y: None
+                    height: 50
+                    #spacing:20
+                    canvas.before:
+                        Color:
+                            rgba: (.06, .45,.45, 1)
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    Label:
+                        text: 'Qty'
+                        size_hint_x: .1
+                    Label:
+                        text: 'Product Name'
+                        size_hint_x: .3
+                    Label:
+                        text: 'Date'
+                        size_hint_x: .15
+                    Label:
+                        text: 'GST%'
+                        size_hint_x: .1
+                    Label:
+                        text: 'COST'
+                        size_hint_x: .125
+                    Label:
+                        text: 'Total'
+                        size_hint_x: .2
+                ScrollView:
+                    do_scroll_x: False
+                    do_scroll_y: True
+                    size_hint_x:.9999
+                    size_hint_y:.5
+                    GridLayout:
+                        id: products
+                        cols: 1
+                        size_hint_x:.9999
+                        size_hint_y:.3
+
+        BoxLayout:
+            id: preview
+            orientation: 'vertical'
+            size_hint: .2,.8
+            pos_hint: {"center_x":.48, "center_y":.668}
+
+            TextInput:
+                id: receipt_preview
+                readonly: True
+                text: 'GST Tracker\nAligarh \nHamdard Nagar B \n\nTel: +918265967237\n\n'
+                allow_copy:False
+    BoxLayout:
+        id: footer
+        size_hint_y: None
+        height: 30
+        canvas.before:
+            Color:
+                rgba: (.06, .47, .47, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: 'Maintained by AHK'
+    MDIconButton:
+        pos_hint:{"center_x": 0.045, "y":0.9}
+        icon: "backspace"
+        #md_bg_color: 1,1,1,1
+        theme_text_color: "Custom"
+        text_color: app.theme_cls.primary_color
+        on_release:
+            app.go_back()
+    MDFlatButton:
+        text: 'Fetch'.upper()
+        bold: True
+        theme_text_color: 'Custom'
+        md_bg_color: [0,0,0,1]
+        text_color: [1,1,1,1]
+        #size_hint: .6, .1
+        #pos_hint: {'center_x':.5, 'top':.33}
+        pos_hint: {'center_x': 0.9, 'y': 0.06}
+        on_release:
+            root.mang()
+
+
+<SalesPrompt>:
+    name_pos:name_pos
+    qty_inp:qty_inp
+    pur_chase:pur_chase
+    qty:qty
+    orientation: 'vertical'
+    spacing: "2dp"
+    size_hint_y: None
+    height: "243dp"
+    FloatLayout:
+        MDTextField:
+            id: name_pos
+            hint_text: "Product Name"
+            size_hint_x:.5
+            pos_hint:{'x':.003,'center_y':.82}
+            on_text_validate: root.qty_lab()
+            helper_text: "Press Enter to get details"
+            helper_text_mode: 'persistent'
+        MDTextField:
+            id: qty_inp
+            hint_text: "Quantity Sold"
+            size_hint_x:.38
+            pos_hint:{'x':.6,'center_y':.59}
+            helper_text: "Press Enter to Save"
+            helper_text_mode: 'persistent'
+            on_text_validate: root.sales()
+        MDTextField:
+            id: pur_chase
+            hint_text: "Quantity Purchased"
+            size_hint_x:.5
+            pos_hint:{'x':.003,'center_y':.59}
+            #md_bg_foreground_color:1,0,0,1
+            helper_text: "Press Enter to Save"
+            helper_text_mode: 'persistent'
+            on_text_validate: root.purchase()
+        MDTextField:
+            id : qty
+            theme_text_color: "Custom"
+            hint_text:"Quantity"
+            text_color: 0,1,0,1
+            pos_hint: {"x":0.57, "center_y":0.9}
+            size_hint: .14,.2
+            readonly:True
+        MDTextField:
+            id : price
+            theme_text_color: "Custom"
+            hint_text:"Price\nper Item"
+            text_color: 0,1,0,1
+            pos_hint: {"x":0.82, "center_y":0.9}
+            size_hint: .13,.2
+            readonly:True
+        TextInput:
+            id: na
+            hint_text: "Fetch Board"
+            size_hint:.75,.3
+            #multiline:False
+            hint_text_color: 1,1,1,1
+            foreground_color:1,1,1,1
+            background_color:.06,.45,.45,1
+            pos_hint:{'x':.003,'center_y':.12}
+            allow_copy:False
+            #on_text_validate:
+            #h#elper_text: "Press Enter to get details"
+            #helper_text_mode: 'persistent'
+        MDTextField:
+            id: date_purchase
+            hint_text: "Fetch Purchases by Date"
+            size_hint_x:.3
+            multiline:False
+            pos_hint:{'x':.003,'center_y':.36}
+            on_text_validate: root.dpurchase()
+            #h#elper_text: "Press Enter to get details"
+            #helper_text_mode: 'persistent'
+        MDTextField:
+            id: date_sale
+            hint_text: "Fetch Sales by Date"
+            size_hint_x:.3
+            multiline:False
+            pos_hint:{'x':.6,'center_y':.36}
+            on_text_validate: root.dsale()
+            #h#elper_text: "Press Enter to get details"
+            #helper_text_mode: 'persistent'
+        MDFlatButton:
+            text: 'sales'.upper()
+            bold: True
+            theme_text_color: 'Custom'
+            md_bg_color: [0,0,0,1]
+            text_color: [1,1,1,1]
+            #size_hint: .6, .1
+            #pos_hint: {'center_x':.5, 'top':.33}
+            pos_hint:{'x':.8,'center_y':.05}
+            on_release:
+                root.hsale()
+        MDFlatButton:
+            text: 'purchase'.upper()
+            bold: True
+            theme_text_color: 'Custom'
+            md_bg_color: [0,0,0,1]
+            text_color: [1,1,1,1]
+            #size_hint: .6, .1
+            #pos_hint: {'center_x':.5, 'top':.33}
+            pos_hint:{'x':.8,'center_y':.2}
+            on_release:
+                root.hpurchase()

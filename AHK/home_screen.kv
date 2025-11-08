@@ -1,0 +1,236 @@
+#:import Window kivy.core.window.Window
+# Define the custom class at the top
+#:include one.kv
+<ContentNavigationDrawer@ScrollView>:
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: dp(10)
+        spacing: dp(10)
+        size_hint_y: None
+        height: self.minimum_height
+        #md_bg_color: 0.95, 0.95, 0.95, 1  # Light gray background color
+
+        # Logo section at the top
+        MDBoxLayout:
+            size_hint_y: None
+            height: dp(120)
+            padding: dp(10)
+            Image:
+                source: "logo-png.png"
+                size_hint: None, None
+                size: dp(130), dp(130)
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                allow_stretch: True
+                keep_ratio: True
+
+        MDSeparator:
+            height: dp(1)
+
+        # Contact information section
+        MDLabel:
+            text: "Contact: +918265967237"
+            theme_text_color: "Secondary"
+            size_hint_y: None
+            height: self.texture_size[1]
+            font_name:"ea.ttf"
+
+        MDLabel:
+            text: "First floor,Champion market,Aligarh"
+            theme_text_color: "Secondary"
+            size_hint_y: None
+            height: self.texture_size[1]
+            font_name:"2.ttf"
+
+        MDSeparator:
+            height: dp(1)
+
+        # List items for features
+        MDList:
+            OneLineIconListItem:
+                text: "TradingBot"
+                divider_color:"grey"
+                on_release: app.open_trading_bot_screen()
+                IconLeftWidget:
+                    icon: "robot-outline"
+
+            OneLineIconListItem:
+                text: "NotePad"
+                divider_color:"grey"
+                on_press: app.open_airdrops()
+                IconLeftWidget:
+                    icon: "notebook-edit-outline"
+
+            OneLineIconListItem:
+                text: "Qur'an"
+                divider_color:"grey"
+                on_press: app.open_quran()
+                IconLeftWidget:
+                    icon: "book-open-page-variant-outline"
+            OneLineIconListItem:
+                text: "More Features Coming soon"
+                divider_color:"grey"
+                IconLeftWidget:
+                    icon: "menu"
+
+
+
+<HomeScreen>:
+    name: "home"
+
+    FloatLayout:
+        id: main_layout
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: 1, 1
+
+            MDTopAppBar:
+                title: "Crypto Farm"
+                elevation: 4
+                left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+
+            MDBottomNavigation:
+                id: bottom_nav
+                panel_color: 0.98, 0.98, 0.98, 1  # Default to light mode colors
+                text_color_active: 0, 0, 0, 1
+                text_color_normal: 0.5, 0.5, 0.5, 1
+
+                MDBottomNavigationItem:
+                    name: "profile"
+                    text: "Profile"
+                    icon: "account"
+                    FitImage:
+                        source:"cr.png"
+
+                    FloatLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 0.5  # 50% opacity white background
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+
+                        MDCard:
+                            size_hint: None, None
+                            size: dp(130), dp(130)
+                            radius: [dp(20)]
+                            elevation: 10
+                            md_bg_color: 0, 0, 0, 0.6  # transparent background
+                            pos_hint: {"center_x": 0.5,"center_y": 0.8}
+
+                            FloatLayout:
+                                AsyncImage:
+                                    id: profile_picture
+                                    source: "circular_profile.png"  # pre-cropped circular image
+                                    size_hint: None, None
+                                    size: dp(110), dp(110)
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                    allow_stretch: True
+                                    keep_ratio: True
+
+                        MDLabel:
+                            id: profile_label
+                            text: "Loading profile..."
+                            halign: "center"
+                            font_name: "3.ttf"
+                            font_style:"H6"
+                            theme_text_color:"Custom"
+                            text_color: 1,1,1, 1  # Converted to normalized RGB values
+                            size_hint: (None, None)
+                            size: dp(260), dp(58)
+                            pos_hint: {"center_x": 0.5,"center_y": 0.5}
+                            canvas.before:
+                                Color:
+                                    rgba: 0, 0, 0, 0.5  # 50% opacity white background
+                                RoundedRectangle:
+                                    pos: self.pos
+                                    size: self.size
+                                    radius: [dp(10)]  # Optional: rounds the corners slightly
+
+                MDBottomNavigationItem:
+                    name: "courses"
+                    text: "Courses"
+                    icon: "book-open"
+                    FitImage:
+                        source:"cr.png"
+
+                    ScrollView:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 0.9  # 50% opacity white background
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(10)]  # Optional: rounds the corners slightly
+                        MDList:
+                            id: course_list
+
+
+                MDBottomNavigationItem:
+                    name: "settings"
+                    text: "Settings"
+                    icon: "cog"
+                    FitImage:
+                        source:"cr.png"
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        padding: dp(30)
+                        spacing: dp(40)
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 0.7  # 50% opacity white background
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(10)]  # Optional: rounds the corners slightly
+
+                        MDLabel:
+                            text: "Switch Light/Dark Mode"
+                            halign: 'center'
+                            theme_text_color:"Custom"
+                            font_name: "3.ttf"
+                            text_color: 1,1,1, 1  # Converted to normalized RGB values
+
+                        MDSwitch:
+                            id: dark_mode_switch
+                            pos_hint: {"center_x": 0.5}
+                            thumb_color_inactive: "orange"
+                            icon_inactive: "weather-sunny"
+                            #size_hint_x: 0.08
+                            icon_active: "weather-night"
+                            track_color_inactive: "white"
+                            active: app.theme_cls.theme_style == "Dark"
+                            on_active: app.toggle_dark_mode(self.active)
+
+
+                        MDRaisedButton:
+                            text: "Choose Theme"
+                            pos_hint: {"center_x": 0.5}
+                            on_release: app.open_theme_menu(self)
+
+                        MDSeparator:
+                            height: dp(2)
+                            theme_color:"Custom"
+                            color: 1,1,1, 1  # Converted to normalized RGB values
+
+                        MDRaisedButton:
+                            text: "Log Out"
+                            pos_hint: {"center_x": 0.5}
+                            on_release: app.logout()
+
+
+
+
+
+        # Overlay widget for dimming effect (covers entire screen)
+        MDBoxLayout:
+            id: overlay
+            size_hint: 1, 1
+            md_bg_color: 0, 0, 0, 0.5  # Black with 50% opacity
+            opacity: 0  # Initially hidden
+
+    MDNavigationDrawer:
+        id: nav_drawer
+        ContentNavigationDrawer:
+            id: content_drawer

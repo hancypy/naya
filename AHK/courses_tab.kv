@@ -1,0 +1,17 @@
+<CoursesTab@MDScreen>:
+    name: "courses"
+    BoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "Courses"
+            elevation: 10
+
+        ScrollView:
+            MDBoxLayout:
+                id: courses_layout
+                orientation: "vertical"
+                padding: dp(10)
+                spacing: dp(10)
+                size_hint_y: None
+                height: self.minimum_height

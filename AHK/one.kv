@@ -1,0 +1,148 @@
+#:import toast kivymd.toast.toast
+#:import utils kivy.utils
+
+<Openquran>:
+    name:"one"
+    FloatLayout:
+        Quran:
+            surah:surah
+            ayah:ayah
+
+            MDTextField:
+                id: surah
+                pos_hint:{"center_x": 0.5 , "y":.9}
+                size_hint_x: .55
+                hint_text:'Ayah or Surah/Ayah no.'
+                mode: "round"
+                halign:"center"
+                hint_text_color:1,0,0,1
+                on_text_validate: self.parent.msg()
+                max_text_length: 8
+                helper_text: "Plz input correct details"
+
+            MDIconButton:
+                icon:"skip-backward"
+                md_bg_color: 1,1,1,1
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                md_bg_color: utils.get_color_from_hex("#216045")
+                pos_hint: {"x":0.02, "y":0.9}
+                elevation_normal: 14
+                on_release:
+                    self.parent.backward()
+                    self.parent.msg()
+                    self.parent.audi()
+            MDIconButton:
+                icon:"skip-forward"
+                md_bg_color: 1,1,1,1
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                md_bg_color: utils.get_color_from_hex("#216045")
+                pos_hint: {"x":0.85, "y":0.9}
+                elevation_normal: 14
+                on_press:
+                    self.parent.forward()
+                    self.parent.msg()
+                    self.parent.audi()
+            MDFillRoundFlatIconButton:
+                icon:'key-variant'
+                text:"Ayah Info"
+                pos_hint:{'center_x':0.5,'y':.8}
+                color:utils.get_color_from_hex("#fb0a66")
+                on_release: self.parent.msg()
+            MDLabel:
+                text:"[color=#216045]Surah Name:[/color]  " + str(self.parent.first)
+                pos_hint:{'x':0.02,'y':.24}
+                color:utils.get_color_from_hex("#fb0a66")
+                markup:True
+                italic:True
+            MDLabel:
+                text:"[color=#216045]Surah Number:[/color]  " + str(self.parent.second)
+                pos_hint:{'x':0.02,'y':.14}
+                color:utils.get_color_from_hex("#fb0a66")
+                markup:True
+                italic:True
+            MDLabel:
+                text:"   , " + str(self.parent.third)
+                pos_hint:{'x':0.54,'y':.24}
+                color:app.theme_cls.accent_color
+                italic:True
+            MDLabel:
+                text:"[color=#216045]Total Ayah in this Surah:[/color]  " + str(self.parent.fourth)
+                pos_hint:{'x':0.24,'y':.07}
+                color:utils.get_color_from_hex("#fb0a66")
+                markup:True
+                italic:True
+            MDLabel:
+                text:"[color=#216045]Revealed:[/color]  " + str(self.parent.fifth)
+                pos_hint:{'x':0.575,'y':.14}
+                color:utils.get_color_from_hex("#fb0a66")
+                markup:True
+                italic:True
+            ScrollView:
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#fb0a66")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                size_hint_x: .97
+                size_hint_y: .3
+                pos_hint: {"x": 0.015 , "y":.23}
+                do_scroll_y: True
+                do_scroll_x: False
+                MDLabel:
+                    id: ayah
+                    text:"Enter Ayah number\n(For Example:1 to 6236)\n\nor\n\nSurah Number : Ayah Number\n(For Example:114:6)\n\nQuran recitation in audio by Mishary Rashid Alafasy"
+                    size: self.texture_size
+                    font_style: "Subtitle1"
+                    font_name:"ea.ttf"
+                    color:1,1,1,1
+                    padding: 10, 10
+                    bold:True
+                    size_hint_x: .97
+                    size_hint_y: None
+            MDSpinner:
+                size_hint: None, None
+                size: dp(46), dp(46)
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                active: True if surah.text != ""  and ayah.text == "Enter Ayah number\n(For Example:1 to 6236)\n\nor\n\nSurah Number : Ayah Number\n(For Example:114:6)\n\nQuran recitation in audio by Mishary Rashid Alafasy" else False
+                palette:[0.28627450980392155, 0.8431372549019608, 0.596078431372549, 1],             [0.3568627450980392, 0.3215686274509804, 0.8666666666666667, 1],             [0.8862745098039215, 0.36470588235294116, 0.592156862745098, 1],             [0.8784313725490196, 0.9058823529411765, 0.40784313725490196, 1]
+            MDFillRoundFlatIconButton:
+                text:"Quran Recitation"
+                icon:'play'
+                size_hint: 0.08, 0.07
+                pos_hint: {"x":0.01, "y":0.125}
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                md_bg_color: app.theme_cls.primary_color
+                adaptive_height:True
+                on_release:
+                    self.parent.audi()
+            MDIconButton:
+                pos_hint:{"x":0.85, "y":0.125}
+                icon: "home"
+                md_bg_color: "orange"
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                on_release:
+                    app.go_back()
+            MDIconButton:
+                icon:"refresh"
+                md_bg_color: "orange"
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                pos_hint: {"x":0.68, "y":0.125}
+                elevation_normal: 14
+                on_release:
+                    self.parent.gayab()
+            MDIconButton:
+                icon:"content-copy"
+                md_bg_color: "orange"
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                pos_hint: {"x":0.51, "y":0.125}
+                elevation_normal: 14
+                on_release:
+                    self.parent.copy_clipboard()
+                    toast(text = "Translation Copied")

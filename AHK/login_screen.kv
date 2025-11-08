@@ -1,0 +1,111 @@
+<LoginScreen>:
+	name: "login"
+    FitImage:
+        source:"cr.png"
+    MDCard:
+        id: login_card
+        size_hint: None, None
+        size: dp(300), dp(560)
+        radius: [dp(40)]
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        elevation: 10
+        padding: dp(20)
+        spacing: dp(20)
+        md_bg_color: 1,1,1,0.9
+        orientation: 'vertical'
+        MDLabel:
+            id: login_label
+            text: "W e l c o m e !"
+            font_size: dp(30)
+            halign: 'center'
+            theme_text_color: "Custom"
+            font_name: "2.ttf"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+            color: 0.53, 0.52, 0.76, 1  # Converted to normalized RGB values
+            #padding_y: 15
+        MDRectangleFlatIconButton:
+            icon: "google"
+            line_color: 0.53, 0.52, 0.76, 1
+            font_name: "3.ttf"
+            theme_text_color: "Custom"
+            text_color: "green"
+            theme_icon_color: "Custom"
+            icon_color: "blue"
+            text: "Continue with Google"
+            size_hint_x: 0.75
+            md_bg_color: "cyan"
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.show_android_toast("wait 10 sec")
+                app.google_sign_in()
+        MDTextField:
+            id: email
+            hint_text: "Email"
+            multiline: False
+            icon_left: 'email'
+            font_size: dp(20)
+            size_hint_x: 0.8
+            #width: 300
+            #font_size: 18
+            line_color_normal: 0.53, 0.52, 0.76, 1
+            icon_left_color_normal: 0.53, 0.52, 0.76, 1
+            hint_text_color_normal: 0.53, 0.52, 0.76, 1
+            helper_text: "user@gmail.com"
+            helper_text_color_focus: 0.53, 0.52, 0.76, 1
+            pos_hint: {"center_x": 0.5}
+        MDTextField:
+            id: password
+            hint_text: "Password"
+            icon_left: 'key-variant'
+            #icon_right: "eye-off"
+            font_size: dp(20)
+            size_hint_x: 0.8
+            #width: 300
+            #font_size: 18
+            line_color_normal: 0.53, 0.52, 0.76, 1
+            icon_left_color_normal: 0.53, 0.52, 0.76, 1
+            hint_text_color_normal: 0.53, 0.52, 0.76, 1
+            pos_hint: {"center_x": 0.5}
+            password: True
+        MDIconButton:
+            icon: "eye-off"
+            icon_size: dp(30)
+            pos_hint: {"center_x": 0.5}
+            theme_icon_color: "Custom"
+            icon_color: 0.53, 0.52, 0.76, 1
+            on_release:
+                self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+                password.password = False if password.password is True else True
+        MDRoundFlatButton:
+            text: "Log In"
+            line_color: 0.53, 0.52, 0.76, 1
+            pos_hint: {"center_x": 0.5}
+            font_size: dp(20)
+            size_hint_x: 0.4
+            theme_text_color: "Custom"
+            text_color: "white"
+            md_bg_color: 0.53, 0.52, 0.76, 1  # Converted to normalized RGB values
+            on_release: app.login()
+        MDFlatButton:
+            text: "Forgot Password?"
+            font_size: dp(20)
+            font_name: "2.ttf"
+            pos_hint: {"center_x": 0.5}
+            theme_text_color: "Custom"
+            text_color: "red"
+            on_release: app.forgot_password()
+        MDRoundFlatButton:
+            text: "Sign Up"
+            font_size: dp(20)
+            theme_text_color: "Custom"
+            text_color: "white"
+            size_hint_x: 0.6
+            line_color: 0.53, 0.52, 0.76, 1
+            md_bg_color: 0.53, 0.52, 0.76, 1  # Converted to normalized RGB values
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.show_android_toast("Hello from KV!")
+                app.go_to_signup()
+

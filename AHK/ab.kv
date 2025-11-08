@@ -1,0 +1,115 @@
+#:import MDDialog kivymd.uix.dialog.MDDialog
+#:import MDBoxLayout kivymd.uix.boxlayout.MDBoxLayout
+#:import MDProgressBar kivymd.uix.progressbar.MDProgressBar
+#:import dp kivy.metrics.dp
+
+
+
+<ProgressDialogContent@MDBoxLayout>:
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(10)
+    size_hint_y: None
+    height: self.minimum_height
+
+    MDLabel:
+        id: progress_label
+        text: "0%"
+        halign: "center"
+
+    MDProgressBar:
+        id: progress_bar
+        value: 0
+        min: 0
+        max: 100
+        height: "20dp"
+        size_hint: (1, None)
+
+<Ab>:
+    name: "main_screen"
+    coin_input:coin_input
+    result_card_container:result_card_container
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(10)
+        padding: dp(10)
+        MDTopAppBar:
+            pos_hint: {"top": 1}
+            title: "Crypto Farm Bot by AHK               (+918265967237)"
+            md_bg_color: app.theme_cls.primary_color
+            elevation: 10
+        MDTextField:
+            id: coin_input
+            hint_text: "Enter coin name or symbol"
+            mode: "round"
+            size_hint: 0.57, None
+            max_text_length: 20
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        MDRaisedButton:
+            text: "Analyze"
+            pos_hint: {"center_x": 0.5}
+            on_release: app.on_analyze()
+        MDFillRoundFlatButton:
+            text: "Run Analysis & Send Telegram Alert"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release: app.run_analysiss()
+        MDRaisedButton:
+            text: "ADVANCE BOT"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            md_bg_color:"orange"
+            theme_text_color:"Custom"
+            text_color: 1,1,1,1
+            on_release: app.open_abf()
+
+        # Scrollable card container
+        MDScrollView:
+            id: result_card_container
+            canvas.before:
+                Color:
+                    rgb: app.theme_cls.primary_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
+<LoadingDialog>:
+    orientation: 'vertical'
+    spacing: dp(20)
+    padding: dp(20)
+    size_hint_y: None
+    adaptive_height: True
+    MDLabel:
+        text: "Please wait, analysis in progress..."
+        halign: "center"
+
+    MDProgressBar:
+        id: progress_bar
+        # Determinate progress bar
+        value: 0
+        max: 100
+        height: "20dp"
+        size_hint: (1, None)
+    MDLabel:
+        id: label_progress
+        text: "0%"
+        halign: "center"
+
+<ResultsDialogContent>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: self.minimum_height  # or a fixed height, e.g. dp(500)
+
+    MDScrollView:
+        size_hint: (1, None)
+        height: dp(400)
+        do_scroll_x: False
+        do_scroll_y: True
+
+
+        MDLabel:
+            text: root.message
+            markup: True
+            halign: "center"
+            text_size: self.width, None
+            size_hint_y: None
+            height: self.texture_size[1]

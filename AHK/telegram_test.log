@@ -1,0 +1,186 @@
+2025-01-20 20:46:59,446 - INFO - Test Telegram alert sent successfully.
+2025-01-20 20:49:26,038 - DEBUG - Using proactor: IocpProactor
+2025-01-20 20:49:26,779 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nThis is a test message from your bot.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-20 20:49:26,788 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-20 20:49:26,998 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000249DCDF9400>
+2025-01-20 20:49:26,998 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000249DCDBC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-20 20:49:27,217 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000249DCDD5D10>
+2025-01-20 20:49:27,218 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-20 20:49:27,219 - DEBUG - send_request_headers.complete
+2025-01-20 20:49:27,219 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-20 20:49:27,220 - DEBUG - send_request_body.complete
+2025-01-20 20:49:27,220 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-20 20:49:27,643 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Mon, 20 Jan 2025 15:19:28 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'334'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-20 20:49:27,644 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 200 OK"
+2025-01-20 20:49:27,645 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-20 20:49:27,645 - DEBUG - receive_response_body.complete
+2025-01-20 20:49:27,645 - DEBUG - response_closed.started
+2025-01-20 20:49:27,646 - DEBUG - response_closed.complete
+2025-01-20 20:49:27,646 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 11, 'from': {'id': 7878474153, 'is_bot': True, 'first_name': 'Myapp', 'username': 'CryptoFarmAppBot'}, 'chat': {'id': -4710930529, 'title': 'cryptofarming', 'type': 'group', 'all_members_are_administrators': True}, 'date': 1737386368, 'text': '\U0001f680 Test Alert \U0001f680\nThis is a test message from your bot.'}`
+2025-01-20 20:49:27,647 - INFO - Test Telegram alert sent successfully.
+2025-01-21 21:11:39,242 - DEBUG - Using proactor: IocpProactor
+2025-01-21 21:11:40,087 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-21 21:11:40,098 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-21 21:11:40,311 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001E7F7959400>
+2025-01-21 21:11:40,311 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001E7F791C4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-21 21:11:40,518 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001E7F793DD10>
+2025-01-21 21:11:40,519 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-21 21:11:40,521 - DEBUG - send_request_headers.complete
+2025-01-21 21:11:40,522 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-21 21:11:40,522 - DEBUG - send_request_body.complete
+2025-01-21 21:11:40,522 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-21 21:11:40,815 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Jan 2025 15:41:41 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'314'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-21 21:11:40,819 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 200 OK"
+2025-01-21 21:11:40,820 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-21 21:11:40,820 - DEBUG - receive_response_body.complete
+2025-01-21 21:11:40,821 - DEBUG - response_closed.started
+2025-01-21 21:11:40,821 - DEBUG - response_closed.complete
+2025-01-21 21:11:40,822 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 13, 'from': {'id': 7878474153, 'is_bot': True, 'first_name': 'Myapp', 'username': 'CryptoFarmAppBot'}, 'chat': {'id': -4710930529, 'title': 'cryptofarming', 'type': 'group', 'all_members_are_administrators': True}, 'date': 1737474101, 'text': '\U0001f680 Test Alert \U0001f680\nbittal gandu hai.'}`
+2025-01-21 21:11:40,823 - INFO - Test Telegram alert sent successfully.
+2025-01-21 21:13:14,350 - DEBUG - Using proactor: IocpProactor
+2025-01-21 21:13:15,258 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-21 21:13:15,269 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-21 21:13:15,480 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000019A74CC9400>
+2025-01-21 21:13:15,480 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000019A74C8C4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-21 21:13:15,684 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000019A74CADD10>
+2025-01-21 21:13:15,685 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-21 21:13:15,686 - DEBUG - send_request_headers.complete
+2025-01-21 21:13:15,686 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-21 21:13:15,687 - DEBUG - send_request_body.complete
+2025-01-21 21:13:15,687 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-21 21:13:15,994 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 21 Jan 2025 15:43:16 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'326'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-21 21:13:15,995 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 200 OK"
+2025-01-21 21:13:15,996 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-21 21:13:15,996 - DEBUG - receive_response_body.complete
+2025-01-21 21:13:15,996 - DEBUG - response_closed.started
+2025-01-21 21:13:15,996 - DEBUG - response_closed.complete
+2025-01-21 21:13:15,997 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 15, 'from': {'id': 7878474153, 'is_bot': True, 'first_name': 'Myapp', 'username': 'CryptoFarmAppBot'}, 'chat': {'id': -4710930529, 'title': 'cryptofarming', 'type': 'group', 'all_members_are_administrators': True}, 'date': 1737474196, 'text': '\U0001f680 Test Alert \U0001f680\nbittal bohot badha gandu hai.'}`
+2025-01-21 21:13:15,998 - INFO - Test Telegram alert sent successfully.
+2025-01-22 15:55:48,142 - DEBUG - Using proactor: IocpProactor
+2025-01-22 15:55:48,914 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 15:55:48,926 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 15:55:49,121 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000020E82D29400>
+2025-01-22 15:55:49,121 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020E82CEC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 15:55:49,311 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000020E82D0DD10>
+2025-01-22 15:55:49,312 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 15:55:49,314 - DEBUG - send_request_headers.complete
+2025-01-22 15:55:49,314 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 15:55:49,315 - DEBUG - send_request_body.complete
+2025-01-22 15:55:49,316 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 15:55:49,494 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 400, b'Bad Request', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:25:49 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'154'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 15:55:49,496 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 400 Bad Request"
+2025-01-22 15:55:49,496 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 15:55:49,497 - DEBUG - receive_response_body.complete
+2025-01-22 15:55:49,497 - DEBUG - response_closed.started
+2025-01-22 15:55:49,498 - DEBUG - response_closed.complete
+2025-01-22 15:55:49,500 - ERROR - Failed to send test Telegram alert: Group migrated to supergroup. New chat id: -1002266069070
+2025-01-22 15:56:20,517 - DEBUG - Using proactor: IocpProactor
+2025-01-22 15:56:21,258 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 15:56:21,265 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 15:56:21,451 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000279E9719400>
+2025-01-22 15:56:21,451 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000279E96DC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 15:56:21,647 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000279E96FDD10>
+2025-01-22 15:56:21,648 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 15:56:21,648 - DEBUG - send_request_headers.complete
+2025-01-22 15:56:21,648 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 15:56:21,649 - DEBUG - send_request_body.complete
+2025-01-22 15:56:21,649 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 15:56:21,827 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 400, b'Bad Request', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:26:21 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'154'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 15:56:21,828 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 400 Bad Request"
+2025-01-22 15:56:21,829 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 15:56:21,829 - DEBUG - receive_response_body.complete
+2025-01-22 15:56:21,829 - DEBUG - response_closed.started
+2025-01-22 15:56:21,830 - DEBUG - response_closed.complete
+2025-01-22 15:56:21,830 - ERROR - Failed to send test Telegram alert: Group migrated to supergroup. New chat id: -1002266069070
+2025-01-22 15:57:22,953 - DEBUG - Using proactor: IocpProactor
+2025-01-22 15:57:23,707 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 15:57:23,715 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 15:57:23,903 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000027F7D7D9400>
+2025-01-22 15:57:23,903 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000027F7D79C4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 15:57:24,105 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000027F7D7BDD10>
+2025-01-22 15:57:24,106 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 15:57:24,107 - DEBUG - send_request_headers.complete
+2025-01-22 15:57:24,107 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 15:57:24,108 - DEBUG - send_request_body.complete
+2025-01-22 15:57:24,109 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 15:57:24,289 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 400, b'Bad Request', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:27:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'154'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 15:57:24,291 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 400 Bad Request"
+2025-01-22 15:57:24,292 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 15:57:24,292 - DEBUG - receive_response_body.complete
+2025-01-22 15:57:24,293 - DEBUG - response_closed.started
+2025-01-22 15:57:24,293 - DEBUG - response_closed.complete
+2025-01-22 15:57:24,294 - ERROR - Failed to send test Telegram alert: Group migrated to supergroup. New chat id: -1002266069070
+2025-01-22 16:00:06,586 - DEBUG - Using proactor: IocpProactor
+2025-01-22 16:00:07,355 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 16:00:07,363 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 16:00:07,546 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000019ABBA09400>
+2025-01-22 16:00:07,547 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000019ABB9CC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 16:00:07,741 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000019ABB9EDD10>
+2025-01-22 16:00:07,742 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 16:00:07,744 - DEBUG - send_request_headers.complete
+2025-01-22 16:00:07,744 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 16:00:07,745 - DEBUG - send_request_body.complete
+2025-01-22 16:00:07,745 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 16:00:07,924 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 400, b'Bad Request', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:30:07 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'154'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 16:00:07,926 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 400 Bad Request"
+2025-01-22 16:00:07,927 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 16:00:07,927 - DEBUG - receive_response_body.complete
+2025-01-22 16:00:07,928 - DEBUG - response_closed.started
+2025-01-22 16:00:07,928 - DEBUG - response_closed.complete
+2025-01-22 16:00:07,929 - ERROR - Failed to send test Telegram alert: Group migrated to supergroup. New chat id: -1002266069070
+2025-01-22 16:00:59,066 - DEBUG - Using proactor: IocpProactor
+2025-01-22 16:00:59,810 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4710930529', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 16:00:59,818 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 16:01:00,011 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000022791609400>
+2025-01-22 16:01:00,011 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000227915CC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 16:01:00,201 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000227915EDD10>
+2025-01-22 16:01:00,202 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 16:01:00,202 - DEBUG - send_request_headers.complete
+2025-01-22 16:01:00,203 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 16:01:00,203 - DEBUG - send_request_body.complete
+2025-01-22 16:01:00,203 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 16:01:00,381 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 400, b'Bad Request', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:31:00 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'154'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 16:01:00,383 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 400 Bad Request"
+2025-01-22 16:01:00,383 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 16:01:00,384 - DEBUG - receive_response_body.complete
+2025-01-22 16:01:00,384 - DEBUG - response_closed.started
+2025-01-22 16:01:00,385 - DEBUG - response_closed.complete
+2025-01-22 16:01:00,386 - ERROR - Failed to send test Telegram alert: Group migrated to supergroup. New chat id: -1002266069070
+2025-01-22 16:04:48,146 - DEBUG - Using proactor: IocpProactor
+2025-01-22 16:04:48,887 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4625746737', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 16:04:48,895 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 16:04:49,080 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002345A669400>
+2025-01-22 16:04:49,081 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002345A62C4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 16:04:49,284 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002345A651D10>
+2025-01-22 16:04:49,285 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 16:04:49,286 - DEBUG - send_request_headers.complete
+2025-01-22 16:04:49,286 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 16:04:49,287 - DEBUG - send_request_body.complete
+2025-01-22 16:04:49,287 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 16:04:49,532 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:34:49 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'326'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 16:04:49,534 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 200 OK"
+2025-01-22 16:04:49,535 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 16:04:49,535 - DEBUG - receive_response_body.complete
+2025-01-22 16:04:49,536 - DEBUG - response_closed.started
+2025-01-22 16:04:49,536 - DEBUG - response_closed.complete
+2025-01-22 16:04:49,537 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 20, 'from': {'id': 7878474153, 'is_bot': True, 'first_name': 'Myapp', 'username': 'CryptoFarmAppBot'}, 'chat': {'id': -4625746737, 'title': 'python crypto', 'type': 'group', 'all_members_are_administrators': True}, 'date': 1737542089, 'text': '\U0001f680 Test Alert \U0001f680\nbittal bohot badha gandu hai.'}`
+2025-01-22 16:04:49,538 - INFO - Test Telegram alert sent successfully.
+2025-01-22 16:10:51,175 - DEBUG - Using proactor: IocpProactor
+2025-01-22 16:10:51,918 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '-4625746737', 'text': '\U0001f680 **Test Alert** \U0001f680\nbittal bohot badha gandu hai.', 'parse_mode': <ParseMode.MARKDOWN>}`
+2025-01-22 16:10:51,926 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-22 16:10:52,123 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000161F56F9400>
+2025-01-22 16:10:52,123 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000161F56BC4D0> server_hostname='api.telegram.org' timeout=5.0
+2025-01-22 16:10:52,315 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x00000161F56DDD10>
+2025-01-22 16:10:52,315 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-22 16:10:52,316 - DEBUG - send_request_headers.complete
+2025-01-22 16:10:52,316 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-22 16:10:52,316 - DEBUG - send_request_body.complete
+2025-01-22 16:10:52,316 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-22 16:10:52,521 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Wed, 22 Jan 2025 10:40:52 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'326'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-01-22 16:10:52,522 - INFO - HTTP Request: POST https://api.telegram.org/bot7878474153:AAGxb39AIdALbRYobjkCiJXQdbyb4ReC6Uw/sendMessage "HTTP/1.1 200 OK"
+2025-01-22 16:10:52,523 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-22 16:10:52,523 - DEBUG - receive_response_body.complete
+2025-01-22 16:10:52,523 - DEBUG - response_closed.started
+2025-01-22 16:10:52,524 - DEBUG - response_closed.complete
+2025-01-22 16:10:52,524 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 21, 'from': {'id': 7878474153, 'is_bot': True, 'first_name': 'Myapp', 'username': 'CryptoFarmAppBot'}, 'chat': {'id': -4625746737, 'title': 'python crypto', 'type': 'group', 'all_members_are_administrators': True}, 'date': 1737542452, 'text': '\U0001f680 Test Alert \U0001f680\nbittal bohot badha gandu hai.'}`
+2025-01-22 16:10:52,526 - INFO - Test Telegram alert sent successfully.

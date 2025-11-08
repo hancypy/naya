@@ -1,0 +1,202 @@
+<Abf>:
+    name: "mfunc"
+    coin_input:coin_input
+    progress_bar:progress_bar
+    header_card:header_card
+    header_label:header_label
+    reddit_card:reddit_card
+    reddit_label:reddit_label
+    indicators_card:indicators_card
+    indicators_label:indicators_label
+    fibonacci_card:fibonacci_card
+    fibonacci_label:fibonacci_label
+    fib_signal_label:fib_signal_label
+    volume_card:volume_card
+    volume_label:volume_label
+    votes_card:votes_card
+    votes_label:votes_label
+    reason_card:reason_card
+    reason_label:reason_label
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            title: "Crypto Analysis"
+            elevation: 10
+            md_bg_color: app.theme_cls.primary_color
+            left_action_items: [["keyboard-backspace", lambda x: app.go_back()]]
+
+        ScrollView:
+            MDBoxLayout:
+                orientation: "vertical"
+                spacing: dp(10)
+                padding: dp(10)
+                size_hint_y: None
+                height: self.minimum_height
+
+                MDTextField:
+                    id: coin_input
+                    hint_text: "Enter Coin Name or Symbol (e.g., TON)"
+                    size_hint_x: 0.8
+                    pos_hint: {"center_x": 0.5}
+                    on_text_validate: app.update_cards()
+
+                MDRaisedButton:
+                    text: "Analyze Coin"
+                    size_hint_x: 0.5
+                    pos_hint: {"center_x": 0.5}
+                    on_release: app.update_cards()
+                MDProgressBar:
+                    id: progress_bar
+                    size_hint_x: 1
+                    height: dp(4)
+                    pos_hint: {"center_x": 0.5}
+                    running: False
+
+                MDCard:
+                    id: header_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    size: dp(550), dp(100)
+                    pos_hint: {"center_x": 0.5}
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.8,0.7,0.4,1
+
+                    MDLabel:
+                        id: header_label
+                        text: "Coin: -\\nLatest Price: -"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                MDCard:
+                    id: reddit_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    pos_hint: {"center_x": 0.5}
+                    size: dp(550), dp(100)
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.8,0.3,0.4,1
+                    MDLabel:
+                        id: reddit_label
+                        text: "Reddit Sentiment: -"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                MDCard:
+                    id: indicators_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    size: dp(550), dp(180)
+                    pos_hint: {"center_x": 0.5}
+                    padding: dp(10)
+                    elevation: 10
+
+
+                    ScrollView:
+                        MDLabel:
+                            id: indicators_label
+                            text: "Technical Analysis"
+                            halign: "center"
+                            font_style: "H6"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+                            markup: True  # Allows bold and color formatting
+
+                MDCard:
+                    id: fibonacci_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    pos_hint: {"center_x": 0.5}
+                    size: dp(550), dp(250)
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.5,0.3,0.8,1
+                    MDLabel:
+                        text: "Fibonacci Levels"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                    MDLabel:
+                        id: fibonacci_label
+                        text: "-"
+                        halign: "left"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                    MDLabel:
+                        id: fib_signal_label
+                        text: "-"
+                        halign: "center"
+
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+
+                MDCard:
+                    id: volume_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    pos_hint: {"center_x": 0.5}
+                    size: dp(550), dp(120)
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.1,0.5,0.8,1
+                    MDLabel:
+                        text: "Volume Data"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                    MDLabel:
+                        id: volume_label
+                        text: "-"
+                        halign: "center"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+
+                MDCard:
+                    id: votes_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    pos_hint: {"center_x": 0.5}
+                    size: dp(550), dp(100)
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.7,0.1,0.8,1
+                    MDLabel:
+                        id: votes_label
+                        text: "-"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+
+                MDCard:
+                    id: reason_card
+                    orientation: "vertical"
+                    size_hint: 0.9, None
+                    size: dp(550), dp(150)
+                    pos_hint: {"center_x": 0.5}
+                    padding: dp(10)
+                    elevation: 10
+                    md_bg_color: 0.1,0.1,0.2,1
+                    MDLabel:
+                        text: "Reason Summary"
+                        halign: "center"
+                        font_style: "H6"
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1
+                    MDLabel:
+                        id: reason_label
+                        text: "-"
+                        halign: "center"
+
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        theme_text_color: "Custom"
+                        text_color: 1,1,1,1

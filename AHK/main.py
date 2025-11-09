@@ -1635,21 +1635,21 @@ class ResultsDialogContent(MDBoxLayout):
     """Dialog content: scrollable label for final results."""
     message = StringProperty("")
 #Window.size = (310, 630)
-RAPIDAPI_KEY = "a0b376f172mshf443aa178733bbbp1dad04jsn5d7218654ca4"  # Replace with your actual RapidAPI key
+RAPIDAPI_KEY = ""  # Replace with your actual RapidAPI key
 HEADERS = {
     "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
     "X-RapidAPI-Key": RAPIDAPI_KEY
 }
 # Firebase Configuration
 firebase_config = {
-    "apiKey": "AIzaSyBofV3-swMB__kPnq16_JB6tJMyRErV6zo",
-    "authDomain": "letsdoit-3924b.firebaseapp.com",
-    "databaseURL": "https://letsdoit-3924b.firebaseio.com",
-    "projectId": "letsdoit-3924b",
-    "storageBucket": "letsdoit-3924b.appspot.com",
-    "messagingSenderId": "489929957343",
-    "appId": "1:489929957343:web:2823250796f17bb58c6e6a",
-    "measurementId": "G-VR0HQWSPCR"
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": "",
+    "measurementId": ""
 }
 
 firebase = pyrebase.initialize_app(firebase_config)
@@ -1817,7 +1817,7 @@ def fetch_market_data():
     url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
     headers = {
         "Accepts": "application/json",
-        "X-CMC_PRO_API_KEY": "85c5aac4-4924-483a-9dc2-5c11fb2bae77",  # Replace with valid API key
+        "X-CMC_PRO_API_KEY": "",  # Replace with valid API key
     }
     params = {
         "start": 250,
@@ -3567,7 +3567,7 @@ class CryptoCoachingApp(MDApp):
                 "per_page": 250,
                 "page": 1
             }
-            headers = {"X-RapidAPI-Key": "a0b376f172mshf443aa178733bbbp1dad04jsn5d7218654ca4"}
+            headers = {"X-RapidAPI-Key": ""}
 
             response = self.rate_limited_request(url, headers, params)
             response.raise_for_status()
